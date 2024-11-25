@@ -14,7 +14,10 @@ class UserController extends Controller
     {
         $users = User::get();
         return response()->json([
-            'users' => $users
+            'S' => true,
+            'M' => 'User List successfully queried',
+            'F' => 'NOTY',
+            'DATA' => User::get()
         ]);
     }
 
